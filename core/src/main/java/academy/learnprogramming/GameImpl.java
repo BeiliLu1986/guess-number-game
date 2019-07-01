@@ -16,6 +16,9 @@ public class GameImpl implements Game {
     private int remainGuesses;
     private boolean validNumberRange = true;
 
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
+        this.numberGenerator = numberGenerator;
+    }
 
     @Override
     public void reset() {
@@ -65,7 +68,7 @@ public class GameImpl implements Game {
             if (guess > number) {
                 biggest = guess - 1;
             }
-            
+
             if (guess < number) {
                 smallest = guess + 1;
             }
